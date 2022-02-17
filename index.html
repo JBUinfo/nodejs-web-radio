@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jebx Radio</title>
+    <script src="socket.io.js" type="text/javascript"></script>
+    <script src="client-script.js" type="text/javascript"></script>
+  </head>
+  <body id="body">
+    <div id='roomList'>
+      <div id="volumeContainer">
+        <span id="volumeDown">-</span>
+        <input id="actualVolume" type="text" maxlength="3" value="100">
+        <span id="volumeUp" >+</span>
+      </div>
+      <h1>ROOMS</h1>
+      <hr>
+    </div>
+    <div id='playlist' class="playlist">
+      <hr>
+      <span id='arrowDropDown'>&#9660;</span>
+    </div>
+    <div id='fullSongListContainer'>
+      <div id="fullListNode">
+
+      </div>
+      <div id="searchContainerSong">
+        <input type="text" id="searchInputSong" placeholder="Search your song here...">
+
+        </input>
+      </div>
+      <div id="arrowDropLeft">
+        &#129152;
+      </div>
+    </div>
+    <div class="center-box">
+      <button id="playButton" type="button">
+        <img id='iconPlayButton' class="play-icon" src="play_icon.png" alt="">
+      </button>
+      <button id="recordButton" type="button">
+        <img id='iconRecordButton' class="record-icon" src="record_icon.png" alt="">
+      </button>
+      <div id="youtubeForm">
+        <input id="youtubeInput" placeholder="Insert YouTube URL" type="text"  name="youtube">
+        <button id="youtubeSendButton" type="submit" name="button">Enviar</button>
+      </div>
+      <div class="hidden" id='Audios'>
+        <audio id="streamaudio" controls="" preload="none"></audio>
+      </div>
+    </div>
+  </body>
+</html>
