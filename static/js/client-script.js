@@ -119,9 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
       audioNode.play().then(() => {
         iconPlayButton.src = "play_icon.png"
       }).catch(error => {
-        if (-1 != error.toString().indexOf("fetching process") || error.toString().indexOf("pause()")) {
-          createAudioNodes(actualRoom);//refresh if error fetching or fast mouse click
-        }
+          const newLoad = error.toString().indexOf("new load request");
+          const errorFetching = error.toString().indexOf("fetching process");
+          const errorPause = error.toString().indexOf("pause()");
+
+          if (-1 == newLoad && ( errorFetching || errorPause )) {
+            setTimeout(()=>{createAudioNodes(actualRoom)}, 1000)
+          }
           console.log(error);
       });
     } else {//pause
