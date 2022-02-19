@@ -9,7 +9,7 @@ The admin can create new rooms adding folders at "music" folder.\
 *The folder's name will be the room's name*
 
 At the Top right corner there is a playlist with the next 5 songs.\
-At the Bottom right corner you can see all the songs that have the room. (You can search by words song titles).\
+At the Bottom right corner you can see all the songs that have the room. (You can search song titles).
 
 The admin can see in CMD the start and the end of all the server functions running.
 ![alt text](https://github.com/JBUinfo/nodejs-web-radio/blob/main/Images/Console.png?raw=true)
